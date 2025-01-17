@@ -2,7 +2,7 @@ export class Main {
 
 
     passwordChecker(password) {
-        if (password.length < 8 || !containsSpecialCharacter(password)) {
+        if (password.length < 8 || !containsSpecialCharacter(password)|| !hasDigit(password)) {
           return false;
         }
         return true;
@@ -15,6 +15,15 @@ export class Main {
                 return true;
             }
         }
+        return false;
+    }
+
+    hasDigit(password) {
+        for (const char of password) {
+            if (char >= '0' && char <= '9') {
+                return true;
+            }
+        }   
         return false;
     }
 }
