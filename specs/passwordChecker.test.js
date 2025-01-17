@@ -10,6 +10,9 @@ describe("passwordChecker", () => {
   it("should return true when password is 8 characters or more", () => {
     expect(main.passwordChecker("12345678")).toBe(true);
   });
+  it("should return false when password don't contains any special char", () => {
+    expect(main.passwordChecker("123!djddddddd")).toBe(false);
+    });
 
 
 });
