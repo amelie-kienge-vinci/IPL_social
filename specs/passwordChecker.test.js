@@ -19,6 +19,8 @@ describe("passwordChecker", () => {
   it("should return false when password don't contains any digit", () => {
     expect(main.passwordChecker("djd!dddddd")).toBe(false);
   });
-  
+  it("should return true when password contains digit", () => {
+    expect(main.passwordChecker("123djddddd!dd")).toBe(true);
+  });
 
 });
