@@ -17,4 +17,5 @@ describe("passwordChecker", () => {
     expect(main.passwordChecker("123djddddd!dd")).toBe(true);
   });
   
+
 });

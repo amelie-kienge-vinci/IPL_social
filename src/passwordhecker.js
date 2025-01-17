@@ -2,7 +2,7 @@ export class Main {
 
 
     passwordChecker(password) {
-        if (password.length < 8 && !containsSpecialCharacter(password)) {
+        if (password.length < 8 || !containsSpecialCharacter(password)) {
           return false;
         }
         return true;
