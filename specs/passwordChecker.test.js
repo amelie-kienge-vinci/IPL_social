@@ -22,5 +22,11 @@ describe("passwordChecker", () => {
   it("should return true when password contains digit", () => {
     expect(main.passwordChecker("123djddddd!dd")).toBe(true);
   });
+  it("should return false when password contains IPL", () => {
+    expect(main.passwordChecker("123djddddd!ddipl")).toBe(false);
+    });
+    it("should return true when password don't contains IPL", () => {
+      expect(main.passwordChecker("123djddddd!dd")).toBe(true);
+    });
 
 });

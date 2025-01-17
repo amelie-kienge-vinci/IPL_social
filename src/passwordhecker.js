@@ -2,7 +2,7 @@ export class Main {
 
 
     passwordChecker(password) {
-        if (password.length < 8 || !containsSpecialCharacter(password)|| !hasDigit(password)) {
+        if (password.length < 8 || !containsSpecialCharacter(password)|| !hasDigit(password) || !donotContainsIPL(password)) {
           return false;
         }
         return true;
@@ -31,4 +31,5 @@ export class Main {
         return !password.toLowerCase().includes("ipl");
     }
     
+
 }
